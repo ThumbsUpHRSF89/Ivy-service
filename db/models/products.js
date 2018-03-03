@@ -6,7 +6,7 @@ const ProductsShema = mongoose.Schema({
   id: { type: Number, unique: true },
   image: String,
   name: String,
-  category: { type: [[String], String] },
+  category: Array,
   overallReview: Number,
   reviewNumber: Number,
   price: String,
@@ -16,11 +16,12 @@ const ProductsShema = mongoose.Schema({
 
 const ProductModel = mongoose.model('Products', ProductsShema);
 
-// findAll retrieves all stories
+
 function findProduct(id) {
   return ProductModel.find(id).then((n) => {
-    const cate = n[0].category;
-    return ProductModel.find({ category: cate });
+    const targetCategory1 = n[0].category[1];
+    const targetCategory2 = n[0].category[3];
+    return ProductModel.find({ category: { $in: [targetCategory1] } });
   });
 }
 
