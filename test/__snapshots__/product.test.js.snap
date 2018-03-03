@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Product> should always render a box 1`] = `undefined`;
+
+exports[`<Product> should render product name, review number, price 1`] = `"TCL-M"`;
+
+exports[`<Product> should render product name, review number, price 2`] = `" 184 "`;
+
+exports[`<Product> should render product name, review number, price 3`] = `" $627.00 "`;

@@ -9,7 +9,6 @@ describe ('server', () => {
     .expect((res) => {
       let data = res.body;
       data.forEach((n) => {
-        console.log(n)
         var containsAorB = n.category.includes("8inches") || n.category.includes("phone2")
         expect(containsAorB).toBe(true)
       });
