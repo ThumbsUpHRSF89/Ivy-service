@@ -1,6 +1,6 @@
 const data = require('./dummyData.txt');
 const mongoose = require('mongoose');
-const phones = require('./models/products.js');
+const products = require('./models/products.js');
 
 mongoose.connect('mongodb://localhost/amazon');
 
@@ -21,7 +21,7 @@ const seedDb = function seedDb(dt) {
       if (err) {console.log('can not save data'); return; }
       console.log('saved data');
     };
-    phones.insertOne(obj, testSaved);
+    products.insertOne(obj, testSaved);
   });
 };
 seedDb(data.data);
