@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./src/jest-setup.js",
+    "setupTestFrameworkScriptFile": "./test/jest-setup.js",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]

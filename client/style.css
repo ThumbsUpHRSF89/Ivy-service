@@ -1,0 +1,212 @@
+body{
+  width: 1280px;
+  margin: 0 auto;
+}
+.outterBox{
+  display: flex;
+  height: 150px;
+  /* border: 0.5px solid green; */
+  width: 96%;
+  margin: 0 auto;
+  flex-direction: row;
+  overflow: hidden;
+}
+.placeholder{
+  width: 88%;
+  height: 100%;
+  margin: 0 auto;
+  /* border: 0.5px solid blue; */
+}
+.box {
+  text-align: center;
+  width: 9.09%;
+  height: 100%;
+  float: left;
+  display: flex;
+  /* border: 0.5px solid red; */
+  margin: 0;
+  flex-direction:column;
+}
+.image {
+  width: 100%;
+  height: 50%;
+  /* border: 0.2px solid red; */
+  display: flex;
+}
+.image a{
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* border: 0.2px solid green;  */
+}
+.image a img{
+  margin: auto auto;
+  max-width:90%;
+  max-height:90%;
+  /* border: 0.4px solid blue; */
+}
+.infobox{
+  width: 100%;
+  height: 50%;
+  /* border: 0.5px solid green; */
+}
+.name{
+  /* border: 0.5px solid green; */
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.name .text{
+  margin: 2% auto 0;
+  font-size: 0.3em;
+  max-width: 95%;
+  max-height: 100%;
+  text-align: left;
+  /* border: 0.5px solid blue; */
+  overflow: hidden;
+  color: rgba(36, 36, 117, 0.87);
+}
+.reviewBox{
+  display: flex;
+  width: 100%;
+  height: 17%;
+  /* border: 0.1px solid blue; */
+}
+.overallReview{
+  width: 52%;
+  height: 90%;
+  display: inline-block;
+  float: left;
+  background: url('http://127.0.0.1:8001/icons.jpg')no-repeat;
+  background-size: 420%;
+  margin: auto 1% auto 4%;
+  /* border: 0.05px solid blue; */
+}
+.five {
+  background-position: 1% 10%;
+}
+.four {
+  background-position: 8% 10%;
+}
+.three{
+  background-position: 14% 10%;
+}
+.two{
+  background-position: 20% 10%;
+}
+.one{
+  background-position: 26% 10%;
+}
+.zero{
+  background-position: 32% 10%;
+}
+.fourHalf {
+  background-position: 67% 10%;
+}
+.threeHalf{
+  background-position: 73% 10%;
+}
+.twoHalf{
+  background-position: 79% 10%;
+}
+.oneHalf{
+  background-position: 85% 10%;
+}
+.half{
+  background-position: 91% 10%;
+}
+
+.reviewNumber{
+  width: 20%;
+  display: inline-block;
+  font-size: 0.01em;
+  margin: auto 0;
+  /* border: 0.2px solid blue; */ 
+}
+.pricebox{
+  display: flex;
+  width: 100%;
+  height: 17%;
+  float: left;
+  margin-left:3%; 
+  /* border: 0.2px solid blue; */
+}
+.price{
+  width: 35%;
+  height: 90%;
+  font-size: 0.6em;
+  display: inline-block;
+  text-align: center;
+  padding-top: 2%;
+  color: brown;
+  /* border: 0.2px solid blue; */
+}
+.isPrime{
+  width: 35%;
+  height: 90%;
+  display: inline-block;
+  background: url('http://127.0.0.1:8001/icons.jpg')no-repeat 1.5% 91%;
+  background-size: 510%;
+  /* border: 0.2px solid blue; */
+}
+.noPrime{
+  display: none;
+}
+
+.pageBox{
+  margin:1% 5%;
+  width: 15%;
+  height: 5%;
+  float: right;
+  display: block;
+  /* border: 0.2px solid blue; */
+}
+.pageNum{
+  padding: 3px 8px 3px 0px;
+  display: inline-block;
+  float: right;
+  font-size: 0.8em;
+  /* border: 0.2px solid blue; */
+}
+.startOver{
+  padding: 3px 3px 3px 8px;
+  display: inline-block;
+  float: right;
+  color: rgba(36, 36, 117, 0.87);
+  font-size: 0.8em;
+  border-left: 0.2px solid grey;
+}
+.startOver:hover{
+  cursor: pointer;
+}
+
+
+.leftButton{
+  width: 6%;
+  display: flex;
+}
+.leftButton button{
+  background-image: url('http://127.0.0.1:8001/left.png');
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: center; 
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  margin: auto auto;
+}
+.rightButton{
+  width: 6%;
+  display: flex;
+}
+.rightButton button{
+  background-image: url('http://127.0.0.1:8001/right.png');
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: center; 
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  margin: auto auto;
+}
