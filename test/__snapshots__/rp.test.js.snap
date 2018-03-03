@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots should show new data when click on right button  1`] = `
+<div>
+  <div
+    className="pageBox"
+  >
+    <div
+      className="startOver"
+      onClick={[Function]}
+    >
+      Start over
+    </div>
+    <div
+      className="pageNum"
+    >
+      Page 
+      2
+       of 
+      0
+    </div>
+  </div>
+  <div
+    className="outterBox"
+  >
+    <div
+      className="leftButton"
+    >
+      <button
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="placeholder"
+    />
+    <div
+      className="rightButton"
+    >
+      <button
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`snapshots should show new data when click on right button  2`] = `
+<div>
+  <div
+    className="pageBox"
+  >
+    <div
+      className="pageNum"
+    >
+      Page 
+      1
+       of 
+      0
+    </div>
+  </div>
+  <div
+    className="outterBox"
+  >
+    <div
+      className="leftButton"
+    >
+      <button
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="placeholder"
+    />
+    <div
+      className="rightButton"
+    >
+      <button
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
