@@ -57,7 +57,7 @@ export default class Product extends React.Component {
   
     return (
       <div className="box">
-        <div className="image"><a href={'http://127.0.0.1:8000/' + this.props.item.id}><img src={this.props.item.image} alt="productImage" /></a></div>
+        <div className="image"><a href={'http://127.0.0.1:8000/product/' + this.props.item.id}><img src={this.props.item.image} alt="productImage" /></a></div>
         <div className="infobox">
           <div className="name"><div className="text" id={this.props.item.id}>{this.state.productName}</div></div>
           <div className="reviewBox">
