@@ -1,6 +1,6 @@
 const data = require('./dummyData.txt');
 const mongoose = require('mongoose');
-const phones = require('./db/momdels/products.js');
+const phones = require('./db/models/products.js');
 
 mongoose.connect('mongodb://localhost/hackazon');
 
