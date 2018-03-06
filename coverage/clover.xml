@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1520304345718" clover="3.2.0">
-  <project timestamp="1520304345718" name="All files">
-    <metrics statements="35" coveredstatements="15" conditionals="16" coveredconditionals="4" methods="3" coveredmethods="3" elements="54" coveredelements="22" complexity="0" loc="35" ncloc="35" packages="2" files="2" classes="2">
+<coverage generated="1520363949575" clover="3.2.0">
+  <project timestamp="1520363949575" name="All files">
+    <metrics statements="70" coveredstatements="40" conditionals="24" coveredconditionals="8" methods="13" coveredmethods="10" elements="107" coveredelements="58" complexity="0" loc="70" ncloc="70" packages="2" files="3" classes="3">
       <package name="client.components">
-        <metrics statements="31" coveredstatements="11" conditionals="16" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <metrics statements="66" coveredstatements="36" conditionals="24" coveredconditionals="8" methods="13" coveredmethods="10"/>
         <file name="product.jsx" path="/Users/yumengzheng/Desktop/Ivy-service/client/components/product.jsx">
           <metrics statements="31" coveredstatements="11" conditionals="16" coveredconditionals="4" methods="3" coveredmethods="3"/>
           <line num="5" count="7" type="stmt"/>
@@ -38,15 +38,53 @@
           <line num="56" count="7" type="cond" truecount="2" falsecount="0"/>
           <line num="58" count="7" type="stmt"/>
         </file>
+        <file name="rp.jsx" path="/Users/yumengzheng/Desktop/Ivy-service/client/components/rp.jsx">
+          <metrics statements="35" coveredstatements="25" conditionals="8" coveredconditionals="4" methods="10" coveredmethods="7"/>
+          <line num="9" count="9" type="stmt"/>
+          <line num="10" count="9" type="stmt"/>
+          <line num="11" count="9" type="stmt"/>
+          <line num="12" count="9" type="stmt"/>
+          <line num="13" count="9" type="stmt"/>
+          <line num="14" count="9" type="stmt"/>
+          <line num="24" count="9" type="stmt"/>
+          <line num="28" count="9" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="46" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="59" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="62" count="1" type="stmt"/>
+          <line num="63" count="1" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
+          <line num="65" count="1" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="79" count="20" type="stmt"/>
+          <line num="80" count="20" type="stmt"/>
+          <line num="81" count="99" type="stmt"/>
+          <line num="84" count="20" type="cond" truecount="2" falsecount="0"/>
+          <line num="85" count="2" type="stmt"/>
+          <line num="87" count="20" type="stmt"/>
+        </file>
       </package>
       <package name="test">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="jest-setup.js" path="/Users/yumengzheng/Desktop/Ivy-service/test/jest-setup.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="5" count="2" type="stmt"/>
-          <line num="7" count="2" type="stmt"/>
-          <line num="8" count="2" type="stmt"/>
-          <line num="9" count="2" type="stmt"/>
+          <line num="5" count="3" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
         </file>
       </package>
     </metrics>

@@ -19,7 +19,7 @@ app.get('/product/:id', async (req, res) => {
   let data = await dataController.findProduct(id);
   // res.header("Access-Control-Allow-Origin", "*");
   // res.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
-  // res.status(201);
+  res.status(201);
   res.send(data);
 });
 
