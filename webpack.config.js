@@ -9,18 +9,19 @@ module.exports = {
             loader: 'css-loader',
             options: {
               root: '.',
-              // url: false,
+              fallback: 'style-loader',
             },
           }],
       },
       {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {},
+        test: /\.(png|jp(e*)g|svg)$/,  
+        use: [{
+          loader: 'url-loader',
+          options: { 
+            limit: 10000, // Convert images < 8kb to base64 strings
+            name: 'images/[hash]-[name].[ext]',
           },
-        ],
+        }],
       },
       {
         test: /\.jsx?$/,

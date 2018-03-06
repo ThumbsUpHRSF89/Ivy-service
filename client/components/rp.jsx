@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import Product from './product';
+import image from '../image/left.png';
 
 
 export default class RelatedProduct extends React.Component {
@@ -20,14 +21,14 @@ export default class RelatedProduct extends React.Component {
   }
   
   componentDidMount() {
-    this.getData(4); // if want to test on local server 8001 change "this.props.id" to a number 
+    this.getData(this.props.id); // if want to test on local server 8001 change "this.props.id" to a number
   }
 
   getData(id) {
     $.get(`http://127.0.0.1:8001/product/${id}`).done((body) => {
       console.log('data from database', body);
       this.setState({ data: body });
-      let totalPage = Math.ceil(body.length / 11);
+      const totalPage = Math.ceil(body.length / 11);
       const cd = body.slice(0, 11);
       this.setState({
         currentData: cd,
