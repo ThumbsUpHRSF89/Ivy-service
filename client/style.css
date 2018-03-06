@@ -78,7 +78,7 @@ body{
   height: 90%;
   display: inline-block;
   float: left;
-  background: url('http://127.0.0.1:8001/icons.jpg')no-repeat;
+  background: url('./image/icons.jpg')no-repeat;
   background-size: 420%;
   margin: auto 1% auto 4%;
   /* border: 0.05px solid blue; */

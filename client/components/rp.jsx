@@ -21,7 +21,7 @@ export default class RelatedProduct extends React.Component {
   }
   
   componentDidMount() {
-    this.getData(this.props.id); // if want to test on local server 8001 change "this.props.id" to a number
+    this.getData(4); // if want to test on local server 8001 change "this.props.id" to a number
   }
 
   getData(id) {
