@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import Product from './product';
+import image from '../image/left.png';
 
 
 export default class RelatedProduct extends React.Component {
