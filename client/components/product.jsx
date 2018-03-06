@@ -13,7 +13,7 @@ export default class Product extends React.Component {
     if (name) {
       const nameHeight = name.clientHeight;
       if (nameHeight > 50) {
-        this.setState({ productName: this.state.productName.slice(0, 80).concat('...') });
+        this.setState({ productName: this.state.productName.slice(0, 60).concat('...') });
       }
     }
   }
