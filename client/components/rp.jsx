@@ -21,7 +21,8 @@ export default class RelatedProduct extends React.Component {
   }
   
   componentDidMount() {
-    this.getData(4); // if want to test on local server 8001 change "this.props.id" to a number
+    const id = Number(window.location.pathname.slice(-1).split('/').pop());
+    this.getData(id); // if want to test on local server 8001 change "this.props.id" to a number
   }
 
   getData(id) {
