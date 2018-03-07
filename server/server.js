@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, '../public')));
-app.use('/:id', express.static(path.join(__dirname, '../public')));
+
 
 app.get('/product/:id', async (req, res) => {
   const id = req.params;
