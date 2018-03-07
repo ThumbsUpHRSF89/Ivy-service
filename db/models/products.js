@@ -19,7 +19,6 @@ const ProductModel = mongoose.model('Products', ProductsShema);
 
 function findProduct(id) {
   return ProductModel.find(id).then((n) => {
-    console.log(id)
     const targetCategory1 = n[0].category[0];
     const targetCategory2 = n[0].category[1];
     return ProductModel.find({ category: { $in: [targetCategory1, targetCategory2] } });
