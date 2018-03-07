@@ -21,6 +21,11 @@
     "start": "nodemon ./server/server.js",
     "data": "node seed.js"
   },
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/ThumbsUpHRSF89/Ivy-service"
+  },
+  "license": "Apache-2.0",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

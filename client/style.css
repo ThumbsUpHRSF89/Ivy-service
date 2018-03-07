@@ -6,7 +6,7 @@ body{
   display: flex;
   height: 150px;
   /* border: 0.5px solid green; */
-  width: 1229;
+  width: 96%;
   margin: 0 auto;
   flex-direction: row;
   overflow: hidden;
@@ -130,10 +130,11 @@ body{
   height: 17%;
   float: left;
   margin-left:3%; 
+  align-items: center;
   /* border: 0.2px solid blue; */
 }
 .price{
-  width: 35%;
+  width: 40%;
   height: 90%;
   font-size: 0.6em;
   display: inline-block;
@@ -183,7 +184,7 @@ body{
 
 
 .leftButton{
-  width: 6%;
+  width: 4%;
   display: flex;
 }
 .leftButton button{
@@ -197,7 +198,7 @@ body{
   margin: auto auto;
 }
 .rightButton{
-  width: 6%;
+  width: 4%;
   display: flex;
 }
 .rightButton button{
