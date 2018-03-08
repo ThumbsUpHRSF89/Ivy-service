@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/hackazon');
+mongoose.connect('mongodb://localhost/ppp');
 
 const ProductsShema = mongoose.Schema({
   id: { type: Number, unique: true },
@@ -25,9 +25,12 @@ function findProduct(id) {
   });
 }
 
-function insertOne(story, callback) {
-  ProductModel.create(story, callback);
+// function insertOne(story, callback) {
+//   ProductModel.create(story, callback);
+// }
+function insertData(products) {
+  return ProductModel.insertMany(products);
 }
-
 exports.findProduct = findProduct;
-exports.insertOne = insertOne;
+// exports.insertOne = insertOne;
+exports.insertData = insertData;

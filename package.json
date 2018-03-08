@@ -19,7 +19,7 @@
     "test:coverage": "jest --coverage",
     "build": "webpack -w",
     "start": "nodemon ./server/server.js",
-    "data": "node seed.js"
+    "data": "node db/worker.js"
   },
   "repository" : { 
     "type" : "git",

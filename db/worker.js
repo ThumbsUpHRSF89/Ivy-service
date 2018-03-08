@@ -2,9 +2,9 @@ const data = require('./dummyData.txt');
 const mongoose = require('mongoose');
 const products = require('./models/products.js');
 
-mongoose.connect('mongodb://localhost/hackazon');
 
 const seedDb = function seedDb(dt) {
+  let data = [];
   dt.forEach((n) => {
     const obj = {
       id: n.id,
@@ -17,11 +17,24 @@ const seedDb = function seedDb(dt) {
       isPrime: n.isPrime,
       hasReview: n.hasReview,
     }; 
-    const testSaved = function testSaved(err) {
-      if (err) {console.log('can not save data'); return; }
-      console.log('saved data');
-    };
-    products.insertOne(obj, testSaved);
+    data.push(obj)
+  });
+  // const testSaved = function testSaved(err) {
+  //   if (err) {console.log('can not save data'); return; }
+  //   console.log('saved data');
+  //   mongoose.disconnect()
+  // };
+  products.insertData(data)
+  .then(() => {
+    console.log('Insert Data Success!');
+    mongoose.disconnect();
+  })
+  .catch((e) => {
+    console.error(e);
+    mongoose.disconnect();
   });
 };
+
 seedDb(data.data);
+
+
