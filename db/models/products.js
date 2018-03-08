@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/ppp');
+mongoose.connect('mongodb://localhost/hackazon');
 
 const ProductsShema = mongoose.Schema({
   id: { type: Number, unique: true },
