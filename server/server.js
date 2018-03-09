@@ -12,9 +12,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, '../public')));
-
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/product/:id', async (req, res) => {
+  console.log('pppppp')
   const id = req.params;
   let data = await dataController.findProduct(id);
   // res.header("Access-Control-Allow-Origin", "*");

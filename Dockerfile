@@ -1,26 +1,13 @@
-# FROM node:9.6.1
-# RUN mkdir /app
-# ADD . /app
-# WORKDIR /app
-# RUN npm install
+FROM node:latest
 
-# EXPOSE 8001
-# CMD ['node', 'index.js']
+RUN mkdir -p /src/app
 
-# base image
-FROM node:9.6.1
+WORKDIR /src/app
 
-# set working directory
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
+COPY . /src/app
 
-# add `/usr/src/app/node_modules/.bin` to $PATH
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+RUN npm install
 
-# install and cache app dependencies
-COPY package.json /usr/src/app/package.json
-RUN npm install --silent
-RUN npm install react-scripts@1.1.1 -g --silent
 EXPOSE 8001
-# start app
-CMD ["npm", "start"]
+
+CMD [ "npm", "start" ]

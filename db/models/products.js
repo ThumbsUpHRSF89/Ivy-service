@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/hackazon');
+mongoose.connect('mongodb://database/hackazon');
 
 const ProductsShema = mongoose.Schema({
   id: { type: Number, unique: true },
@@ -19,9 +19,14 @@ const ProductModel = mongoose.model('Products', ProductsShema);
 
 function findProduct(id) {
   return ProductModel.find(id).then((n) => {
+    console.log('THIS IS N',n[0])
     const targetCategory1 = n[0].category[0];
     const targetCategory2 = n[0].category[1];
-    return ProductModel.find({ category: { $in: [targetCategory1, targetCategory2] } });
+    const data =  ProductModel.find({ category: { $in: [targetCategory1, targetCategory2] } });
+    return data;
+  }).catch((e) => {
+    console.error(e);
+    // mongoose.disconnect();
   });
 }
 
