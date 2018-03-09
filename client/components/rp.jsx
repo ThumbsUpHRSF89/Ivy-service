@@ -27,7 +27,9 @@ export default class RelatedProduct extends React.Component {
   }
 
   getData(id) {
-    $.get(`http://127.0.0.1:8001/product/${id}`).done((body) => {
+    const port = process.env.PORT
+    const host = process.env.HOST
+    $.get(`http://${host}:${port}/product/${id}`).done((body) => {
       console.log('data from database', body);
       this.setState({ data: body });
       const totalPage = Math.ceil(body.length / 11);

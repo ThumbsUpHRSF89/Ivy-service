@@ -4,6 +4,7 @@ const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 const dataController = require('../db/models/products.js');
+require('dotenv').config();
 
 const port = process.env.PORT || 8001;
 
@@ -12,10 +13,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/product/:id', async (req, res) => {
-  console.log('pppppp')
   const id = req.params;
   let data = await dataController.findProduct(id);
   // res.header("Access-Control-Allow-Origin", "*");
