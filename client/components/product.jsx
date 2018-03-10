@@ -10,9 +10,16 @@ export default class Product extends React.Component {
 
   componentDidMount() {
     const name = document.getElementById(this.props.item.id);
+    console.log(window.innerWidth)
     if (name) {
       const nameHeight = name.clientHeight;
-      if (window.innerWidth <=1500) {
+      if(window.innerWidth <=1422) {
+        console.log('pass')
+        if (nameHeight >= 30) {
+          this.setState({ productName: this.state.productName.slice(0, 50).concat('...') });
+        }
+      } else if (window.innerWidth <=1500) {
+        console.log('pass1')
         if (nameHeight >= 67) {
           this.setState({ productName: this.state.productName.slice(0, 84).concat('...') });
         }
