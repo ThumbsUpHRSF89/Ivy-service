@@ -1,12 +1,27 @@
 body{
   width: 100%;
   margin: 0 auto;
+}
+.border{
+  height: 380px;
   /* border: 0.5px solid green; */
+}
+.top-line{
+  width: 96%;
+  height: 0px;
+  border: 0.5px solid #ADB1B8;
+  margin: 0 auto;
+}
+.bottom-line{
+  width: 96%;
+  height: 0px;
+  margin: 0 auto;
+  border: 0.5px solid #ADB1B8;
 }
 .outterBox{
   display: flex;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   flex-direction: row;
   overflow: hidden;
   flex-wrap: nowrap;
@@ -88,7 +103,7 @@ button{
   float: right;
   color: rgba(36, 36, 117, 0.87);
   font-size: 0.8em;
-  /* border-left: 0.2px solid grey; */
+  border-left: 0.2px solid grey;
 }
 .startOver:hover{
   cursor: pointer;
@@ -167,7 +182,7 @@ button{
     background-position: -17px -3px;
   }
   .three{
-    background-position: -34px -3px;
+    background-position: -31px -3px;
   }
   .two{
     background-position: -51px -3px;
@@ -310,7 +325,7 @@ button{
     background-position: -38px -3px;
   }
   .two{
-    background-position: -55 -3px;
+    background-position: -56px -3px;
   }
   .one{
     background-position: -72px -3px;

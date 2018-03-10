@@ -38,8 +38,8 @@ export default class RelatedProduct extends React.Component {
     $.get(`http://${host}:${port}/product/${id}`).done((body) => {
       console.log('data from database', body);
       this.setState({ data: body });
-      const totalPage = Math.ceil(body.length / 11);
-      const cd = body.slice(0, 11);
+      const totalPage = Math.ceil(body.length / this.state.displayNum);
+      const cd = body.slice(0, this.state.displayNum);
       this.setState({
         currentData: cd,
         pages: totalPage,
@@ -95,7 +95,8 @@ export default class RelatedProduct extends React.Component {
       button = <div className="startOver" onClick={this.handleStartOverButton}>Start over</div>;
     } 
     return (
-      <div>
+      <div className="border">
+        <div className="top-line" />
         <div className="pageBox">
           {button}
           <div className="pageNum">Page {this.state.pageNum} of {this.state.pages}</div>
@@ -105,6 +106,7 @@ export default class RelatedProduct extends React.Component {
           <div className="placeholder">{arr}</div>
           <div className="rightButton"><button onClick={this.handleLeftButtonClick} /></div>
         </div>
+        <div className="bottom-line" />
       </div>
     );
   }
