@@ -24,22 +24,28 @@ export default class RelatedProduct extends React.Component {
   componentDidMount() {
     if(window.innerWidth >= 1500){
       this.setState({
-        displayNum:11,
+        displayNum:10,
       })
     }
     let ar = window.location.pathname.split('/');
     let id = Number(ar[ar.length-2]);
-    this.getData(id); // if want to test on local server 8001 change "this.props.id" to a number
+    this.getData(id); 
   }
 
   getData(id) {
-    const port = process.env.PORT
-    const host = process.env.HOST
+    const port = process.env.PORT || 8001;
+    const host = process.env.HOST || 'localhost';
     $.get(`http://${host}:${port}/product/${id}`).done((body) => {
-      console.log('data from database', body);
       this.setState({ data: body });
-      const totalPage = Math.ceil(body.length / this.state.displayNum);
-      const cd = body.slice(0, this.state.displayNum);
+      let totalPage;
+      let cd;
+      if (window.innerWidth >= 1500) {
+        totalPage = Math.ceil(body.length / 10);
+        cd = body.slice(0, 10);
+      } else {
+        totalPage = Math.ceil(body.length / this.state.displayNum);
+        cd = body.slice(0, this.state.displayNum);
+      }
       this.setState({
         currentData: cd,
         pages: totalPage,
