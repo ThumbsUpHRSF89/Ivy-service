@@ -69,8 +69,8 @@ export default class RelatedProduct extends React.Component {
     if (this.state.pageNum === 1) {
       return;
     }
-    const start = (this.state.count - 2) * 11;
-    const end = (this.state.count - 1) * 11;
+    const start = (this.state.count - 2) * this.state.displayNum;
+    const end = (this.state.count - 1) * this.state.displayNum;
     const cd = this.state.data.slice(start, end);
     this.setState({
       currentData: cd,
