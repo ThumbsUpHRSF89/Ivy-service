@@ -12,8 +12,11 @@ export default class Product extends React.Component {
     const name = document.getElementById(this.props.item.id);
     if (name) {
       const nameHeight = name.clientHeight;
-      if (nameHeight > 50) {
-        this.setState({ productName: this.state.productName.slice(0, 63).concat('...') });
+      console.log(nameHeight)
+      if(window.innerWidth <=1500){
+        if (nameHeight >= 67) {
+          this.setState({ productName: this.state.productName.slice(0, 84).concat('...') });
+        }
       }
     }
   }
@@ -56,17 +59,19 @@ export default class Product extends React.Component {
     const ele2 = this.props.item.isPrime ? <span className="isPrime"> {this.props.item.isPrime} </span> : <span className="noPrime"> {this.props.item.isPrime} </span>;
   
     return (
-      <div className="box">
-        <div className="image"><a href={'http://127.0.0.1:8000/product/' + this.props.item.id}><img src={this.props.item.image} alt="productImage" /></a></div>
-        <div className="infobox">
-          <div className="name"><div className="text" id={this.props.item.id}>{this.state.productName}</div></div>
-          <div className="reviewBox">
-            {ele}
-            <span className="reviewNumber"> {this.props.item.reviewNumber} </span>
-          </div>
-          <div className="pricebox">
-            <span className="price"> {this.props.item.price} </span>
-            {ele2}
+      <div className="box-wrap">
+        <div className="box">
+          <div className="image"><a href={'http://127.0.0.1:8000/product/' + this.props.item.id}><img src={this.props.item.image} alt="productImage" /></a></div>
+          <div className="infobox">
+            <div className="name"><div className="text" id={this.props.item.id}>{this.state.productName}</div></div>
+            <div className="reviewBox">
+              {ele}
+              <span className="reviewNumber"> {this.props.item.reviewNumber} </span>
+            </div>
+            <div className="pricebox">
+              <span className="price"> {this.props.item.price} </span>
+              {ele2}
+            </div>
           </div>
         </div>
       </div>

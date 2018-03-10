@@ -15,12 +15,18 @@ export default class RelatedProduct extends React.Component {
       currentData: [],
       data: [],
       count: 1,
+      displayNum:6,
       pageNum: 1,
       pages: 0,
     };
   }
   
   componentDidMount() {
+    if(window.innerWidth >= 1500){
+      this.setState({
+        displayNum:11,
+      })
+    }
     let ar = window.location.pathname.split('/');
     let id = Number(ar[ar.length-2]);
     this.getData(id); // if want to test on local server 8001 change "this.props.id" to a number
@@ -46,12 +52,12 @@ export default class RelatedProduct extends React.Component {
   }
 
   handleLeftButtonClick() {
-    const pageTotalNum = Math.ceil(this.state.data.length / 11);
+    const pageTotalNum = Math.ceil(this.state.data.length / this.state.displayNum);
     if (this.state.pageNum === pageTotalNum) {
       return;
     }
-    const start = this.state.count * 11;
-    const end = (this.state.count + 1) * 11;
+    const start = this.state.count * this.state.displayNum;
+    const end = (this.state.count + 1) * this.state.displayNum;
     const cd = this.state.data.slice(start, end);
     this.setState({
       currentData: cd,

@@ -1,35 +1,55 @@
 body{
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
+  /* border: 0.5px solid green; */
 }
 .outterBox{
   display: flex;
-  height: 150px;
-  /* border: 0.5px solid green; */
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
   flex-direction: row;
   overflow: hidden;
+  flex-wrap: nowrap;
+   /* border: 0.5px solid green; */
 }
 .placeholder{
-  width: 88%;
+  width: 92%;
   height: 100%;
   margin: 0 auto;
   /* border: 0.5px solid blue; */
 }
-.box {
-  text-align: center;
-  width: 9.09%;
-  height: 100%;
-  float: left;
+.leftButton{
+  width: 57px;
   display: flex;
-  /* border: 0.5px solid red; */
-  margin: 0;
-  flex-direction:column;
+  /* border: 1px solid grey; */
+}
+.leftButton button{
+  background-image: url('./image/left.png');
+}
+.rightButton{
+  width: 57px;
+  display: flex;
+  /* border: 1px solid grey; */
+}
+.rightButton button{
+  background-image: url('./image/right.png');
+}
+button{
+  background-size: 60%;
+  background-repeat:no-repeat;
+  background-position: center; 
+  background-color:#f1f2f4; 
+  width:72%;
+  height: 44px;
+  margin: auto 0; 
+  border-radius: 3px;
+  margin: auto auto;
+  border-color:#ADB1B8;
+  cursor: pointer;
+  border-width: 1px;
 }
 .image {
   width: 100%;
-  height: 46%;
   /* border: 0.1px solid red; */
   display: flex;
 }
@@ -42,117 +62,9 @@ body{
 }
 .image a img{
   margin: auto auto;
-  max-width:auto;
+  max-width:90%;
   max-height:90%;
-  /* border: 0.4px solid blue; */
-}
-.infobox{
-  width: 100%;
-  height: 50%;
-  /* border: 0.1px solid green; */
-}
-.name{
-  /* border: 0.3px solid green; */
-  width: 100%;
-  height: auto;
-  display: flex;
-}
-.name .text{
-  margin: 2% auto 0;
-  font-size: 0.3em;
-  max-width: 95%;
-  max-height: 100%;
-  text-align: left;
-  /* border: 0.5px solid blue; */
-  overflow: hidden;
-  color: rgba(36, 36, 117, 0.87);
-}
-.reviewBox{
-  display: flex;
-  width: 100%;
-  height: 17%;
-  /* border: 0.1px solid blue; */
-}
-.overallReview{
-  width: 52%;
-  height: 90%;
-  display: inline-block;
-  float: left;
-  background: url('./image/icons.jpg')no-repeat;
-  background-size: 216px;
-  margin: auto 1% auto 4%;
-  /* border: 0.05px solid blue; */
-}
-.five {
-  background-position: -2px -3px;
-}
-.four {
-  background-position: -12px -3px;
-}
-.three{
-  background-position: -22px -3px;
-}
-.two{
-  background-position: -32px -3px;
-}
-.one{
-  background-position: -42px -3px;
-}
-.zero{
-  background-position: -100px -3px;
-}
-.fourHalf {
-  background-position: -110px -3px;
-}
-.threeHalf{
-  background-position: -120px -3px;
-}
-.twoHalf{
-  background-position: -130px -3px;
-}
-.oneHalf{
-  background-position: -140px -3px;
-}
-.half{
-  background-position: -150px -3px;
-}
-
-.reviewNumber{
-  width: 20%;
-  display: inline-block;
-  font-size: 0.01em;
-  margin: auto 0;
-  /* border: 0.2px solid blue;  */
-}
-.pricebox{
-  display: flex;
-  width: 100%;
-  height: 17%;
-  float: left;
-  margin-left:3%; 
-  align-items: center;
-  /* border: 0.2px solid blue; */
-}
-.price{
-  width: 40%;
-  height: 90%;
-  font-size: 0.6em;
-  display: inline-block;
-  text-align: center;
-  padding-top: 2%;
-  color: brown;
-  /* border: 0.2px solid blue; */
-}
-.isPrime{
-  width: 35%;
-  height: 90%;
-  display: inline-block;
-  background: url('./image/icons.jpg')no-repeat 1.5% 86%;
-  background-size: 225px;
-  /* border: 0.2px solid blue; */
-}
-.noPrime{
-  display: none;
+  /* border: 0.4px solid blue;  */
 }
 
 .pageBox{
@@ -176,38 +88,292 @@ body{
   float: right;
   color: rgba(36, 36, 117, 0.87);
   font-size: 0.8em;
-  border-left: 0.2px solid grey;
+  /* border-left: 0.2px solid grey; */
 }
 .startOver:hover{
   cursor: pointer;
 }
 
 
-.leftButton{
-  width: 4%;
-  display: flex;
-}
-.leftButton button{
-  background-image: url('./image/left.png');
-  background-size: contain;
-  background-repeat:no-repeat;
-  background-position: center; 
-  width: 80%;
-  height: 50px;
-  border-radius: 5px;
-  margin: auto auto;
-}
-.rightButton{
-  width: 4%;
-  display: flex;
-}
-.rightButton button{
-  background-image: url('./image/right.png');
-  background-size: contain;
-  background-repeat:no-repeat;
-  background-position: center; 
-  width: 80%;
-  height: 50px;
-  border-radius: 5px;
-  margin: auto auto;
-}
+
+/* ///////////////////////////////////////////////////////// */
+
+@media (max-width: 4000px) {
+  .outterBox{
+    height: 250px;
+  }
+  .box-wrap{
+    display: flex;
+    width: 9.9%;
+    height: 100%;
+    /* border: 0.5px solid red; */
+    float: left;
+  }
+  .box {
+    text-align: center;
+    width: 135px;
+    height: 100%;
+    display: flex;
+    /* border: 0.5px solid black; */
+    margin: 0 auto;
+    flex-direction:column;
+  }
+  .image{
+    height: 60%;
+     /* border: 0.3px solid green; */
+  }
+  .infobox{
+    width: 100%;
+    height: 40%;
+    /* border: 0.1px solid green; */
+  }
+  .name{
+    /* border: 0.3px solid green; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+  }
+  .name .text{
+    display: block;
+    margin: 2% auto 2%;
+    font-size: 0.7em;
+    max-width: 95%;
+    max-height: 100%;
+    text-align: left;
+    /* border: 0.5px solid blue; */
+    color: rgba(36, 36, 117, 0.87);
+  }
+  .reviewBox{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    /* border: 0.1px solid blue; */
+  }
+  .overallReview{
+    width: 70px;
+    height: 90%;
+    display: inline-block;
+    float: left;
+    background: url('./image/icons.jpg')no-repeat;
+    background-size: 295px;
+    margin: auto 1% auto 1%;
+    /* border: 0.05px solid blue; */
+  }
+  .five {
+    background-position: -3px -3px;
+  }
+  .four {
+    background-position: -17px -3px;
+  }
+  .three{
+    background-position: -34px -3px;
+  }
+  .two{
+    background-position: -51px -3px;
+  }
+  .one{
+    background-position: -59px -3px;
+  }
+  .zero{
+    background-position: -99px -3px;
+  }
+  .fourHalf {
+    background-position: -159px -3px;
+  }
+  .threeHalf{
+    background-position: -163px -3px;
+  }
+  .twoHalf{
+    background-position: -177.5px -3px;
+  }
+  .oneHalf{
+    background-position: -192px -3px;
+  }
+  .half{
+    background-position: -206.5px -3px;
+  }
+  
+  .reviewNumber{
+    width: 20%;
+    display: inline-block;
+    font-size: 1em;
+    margin: auto 0;
+    color: rgba(36, 36, 117, 0.87);
+    /* border: 0.2px solid blue;  */
+  }
+  .pricebox{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    float: left;
+    align-items: center;
+    /* border: 0.2px solid blue; */
+  }
+  .price{
+    width: 40%;
+    height: 90%;
+    font-size: 1em;
+    display: inline-block;
+    text-align: center;
+    padding-top: 2%;
+    color: brown;
+    /* border: 0.2px solid blue; */
+  }
+  .isPrime{
+    width: 35%;
+    height: 90%;
+    display: inline-block;
+    background: url('./image/icons.jpg')no-repeat 1.5% 90%;
+    background-size: 260px;
+    /* border: 0.2px solid blue; */
+  }
+  .noPrime{
+    display: none;
+  }
+  }
+  
+
+
+
+/* ///////////////////////////////////////////////////////// */
+
+@media (max-width: 1500px) {
+  .outterBox{
+    height: 300px;
+  }
+  .box-wrap{
+    display: flex;
+    width: 16.6%;
+    height: 100%;
+    /* border: 0.5px solid red; */
+    float: left;
+  }
+  .box {
+    text-align: center;
+    width: 180px;
+    height: 100%;
+    display: flex;
+    /* border: 0.5px solid black; */
+    margin: 0 auto;
+    flex-direction:column;
+  }
+  .image{
+    height: 60%;
+     /* border: 0.3px solid green; */
+  }
+  .infobox{
+    width: 100%;
+    height: 40%;
+    /* border: 0.1px solid green; */
+  }
+  .name{
+    /* border: 0.3px solid green; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+  }
+  .name .text{
+    display: block;
+    margin: 2% auto 2%;
+    font-size: 0.9em;
+    max-width: 95%;
+    max-height: 100%;
+    text-align: left;
+    /* border: 0.5px solid blue; */
+    color: rgba(36, 36, 117, 0.87);
+  }
+  .reviewBox{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    /* border: 0.1px solid blue; */
+  }
+  .overallReview{
+    width: 85px;
+    height: 90%;
+    display: inline-block;
+    float: left;
+    background: url('./image/icons.jpg')no-repeat;
+    background-size: 360px;
+    margin: auto 1% auto 4%;
+    /* border: 0.05px solid blue; */
+  }
+  .five {
+    background-position: -4px -3px;
+  }
+  .four {
+    background-position: -21px -3px;
+  }
+  .three{
+    background-position: -38px -3px;
+  }
+  .two{
+    background-position: -55 -3px;
+  }
+  .one{
+    background-position: -72px -3px;
+  }
+  .zero{
+    background-position: -99px -3px;
+  }
+  .fourHalf {
+    background-position: -183px -3px;
+  }
+  .threeHalf{
+    background-position: -200px -3px;
+  }
+  .twoHalf{
+    background-position: -217px -3px;
+  }
+  .oneHalf{
+    background-position: -235px -3px;
+  }
+  .half{
+    background-position: -252px -3px;
+  }
+  
+  .reviewNumber{
+    width: 20%;
+    display: inline-block;
+    font-size: 1em;
+    margin: auto 0;
+    color: rgba(36, 36, 117, 0.87);
+    /* border: 0.2px solid blue;  */
+  }
+  .pricebox{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    float: left;
+    align-items: center;
+    /* border: 0.2px solid blue; */
+  }
+  .price{
+    width: 40%;
+    height: 90%;
+    font-size: 1em;
+    display: inline-block;
+    text-align: center;
+    padding-top: 2%;
+    color: brown;
+    /* border: 0.2px solid blue; */
+  }
+  .isPrime{
+    width: 35%;
+    height: 90%;
+    display: inline-block;
+    background: url('./image/icons.jpg')no-repeat 1.5% 90%;
+    background-size: 350px;
+    /* border: 0.2px solid blue; */
+  }
+  .noPrime{
+    display: none;
+  }
+  }
+
+
+
+
+  
