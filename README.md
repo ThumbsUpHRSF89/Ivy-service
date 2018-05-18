@@ -1,21 +1,21 @@
-#### Project Name
+### Project Name
 
 Carousel Micro-service
 
-#### Description
+### Description
 
 Micro-service of the carousel component for Amazon Product Page Clone Project. 
 
-#### Related Projects
+### Related Projects
 
 Proxy server for Amazon Product Page Clone Project. 
 https://github.com/hackazonDevs/ivy-proxy-server
 
-#### Installing Dependencies
+### Installing Dependencies
 
 * `npm install`
 
-#### Development
+### Development
 
 * `npm start`
 This starts a webserver at http://localhost:8001
