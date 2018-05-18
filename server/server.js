@@ -16,9 +16,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/product/:id', async (req, res) => {
   const id = req.params;
-  let data = await dataController.findProduct(id);
-  // res.header("Access-Control-Allow-Origin", "*");
-  // res.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
+  const data = await dataController.findProduct(id);
   res.status(201);
   res.send(data);
 });

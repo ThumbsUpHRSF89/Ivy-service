@@ -20,7 +20,7 @@
     "build": "webpack -w",
     "server": "nodemon ./server/server.js",
     "data": "node db/worker.js",
-    "start": "npm run data && npm run server"
+    "start": "npm run server &&  npm run data "
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://database/hackazon');
+mongoose.connect('mongodb://localhost:27017/hackazon');
 
 const ProductsShema = mongoose.Schema({
   id: { type: Number, unique: true },

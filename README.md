@@ -1,39 +1,21 @@
 # Project Name
 
-> Project description
+Carousel Micro-service
 
-## Related Projects
+##Description
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+Micro-service of the carousel component for Amazon Product Page Clone Project. 
 
-## Table of Contents
+### Related Projects
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+Proxy server for Amazon Product Page Clone Project. 
+https://github.com/hackazonDevs/ivy-proxy-server
 
-## Usage
+#### Installing Dependencies
 
-> Some usage instructions
+* `npm install`
 
-## Requirements
+##### Development
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
+* `npm start`
 
